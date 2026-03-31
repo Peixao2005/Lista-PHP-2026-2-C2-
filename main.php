@@ -1,19 +1,12 @@
 <?php 
-include("main.html");
-function fatorial($numero){
-    $resultado = 1;
+    include("main.html");
 
-    for ($i = 1; $i <= $numero; $i++) {
-        $resultado = $resultado * $i;
+    $numero1= $_GET["numero1"];
+    if ($numero1>100 && $numero1<200){   
+        ECHO "seu numero esta no intervalo de 100 a 200";
+    }
+    else{
+        echo"seu numero não esta no intervalo entre 100 e 200";
     }
 
-    return $resultado;
-}
-$numero1 = $_GET["numero1"];
-$numero2 = $_GET["numero2"];
-// calcula os fatoriais
-$fat1 = fatorial($numero1);
-$fat2 = fatorial($numero2);
-// soma dos fatoriais
-echo "a soma dos fatoriais é: " . ($fat1 + $fat2);
 ?>
