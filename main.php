@@ -1,16 +1,19 @@
-<?php
+<?php 
+include("main.html");
+function fatorial($numero){
+    $resultado = 1;
 
-function calcularMedia($a, $b, $c) {
-    $media = ($a + $b + $c) / 3;
-    return $media;
+    for ($i = 1; $i <= $numero; $i++) {
+        $resultado = $resultado * $i;
+    }
+
+    return $resultado;
 }
-
-$n1 = $_POST["n1"];
-$n2 = $_POST["n2"];
-$n3 = $_POST["n3"];
-
-$resultado = calcularMedia($n1, $n2, $n3);
-
-echo "A média é: " . $resultado;
-
+$numero1 = $_GET["numero1"];
+$numero2 = $_GET["numero2"];
+// calcula os fatoriais
+$fat1 = fatorial($numero1);
+$fat2 = fatorial($numero2);
+// soma dos fatoriais
+echo "a soma dos fatoriais é: " . ($fat1 + $fat2);
 ?>
