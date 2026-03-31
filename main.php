@@ -1,12 +1,16 @@
-<?php 
-    include("main.html");
+<?php
 
-    $numero1= $_GET["numero1"];
-    if ($numero1>100 && $numero1<200){   
-        ECHO "seu numero esta no intervalo de 100 a 200";
-    }
-    else{
-        echo"seu numero não esta no intervalo entre 100 e 200";
-    }
+function calcularMedia($a, $b, $c) {
+    $media = ($a + $b + $c) / 3;
+    return $media;
+}
+
+$n1 = $_POST["n1"];
+$n2 = $_POST["n2"];
+$n3 = $_POST["n3"];
+
+$resultado = calcularMedia($n1, $n2, $n3);
+
+echo "A média é: " . $resultado;
 
 ?>
